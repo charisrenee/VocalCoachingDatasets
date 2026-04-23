@@ -1,0 +1,52 @@
+# Vocal Datasets
+
+Starter registry of vocal and singing datasets.
+
+Source of truth for the table below: `datasets.csv`
+
+## Columns
+
+- `name`
+- `task`
+- `data_types`
+- `owner`
+- `language`
+- `access`
+- `license`
+- `paper`
+- `dataset_url`
+- `notes`
+
+## Datasets
+
+| name | task | data_types | owner | language | access | license | paper | dataset_url | notes |
+|---|---|---|---|---|---|---|---|---|---|
+| Lyra-SA | singing assessment | audio; ratings; MIDI; lyrics | Tencent / WeSing / Tianqin Music Lab | Mandarin | open | check source terms | https://lyracobar.y.qq.com/singvoicedataset_en.html | https://lyracobar.y.qq.com/singvoicedataset_en.html | good starting dataset for full-song scoring |
+| SingEval | singing assessment | annotations; ratings | SingEval authors + DAMP audio | English | open annotations / restricted audio | mixed | https://github.com/chitralekha18/SingEval | https://github.com/chitralekha18/SingEval | depends on DAMP for audio |
+| DAMP-VP1k | karaoke singing | audio; metadata; singer ids | Smule | multilingual | restricted | Smule research terms | https://zenodo.org/records/2533419 | https://zenodo.org/records/2533419 | useful source audio for singing assessment |
+| PESnQ-DS | singing assessment | audio; overall score; intonation; rhythm; vibrato; timbre; pronunciation | NUS researchers | English | limited / paper-linked | check source terms | https://www.cambridge.org/core/journals/apsipa-transactions-on-signal-and-information-processing/article/technical-framework-for-automatic-perceptual-evaluation-of-singing-quality/5F6AECB907FE842481D070850EDF1EFA | https://smcnus.comp.nus.edu.sg/archive/pdf/2017-2018/2018_pesnq-apsipa-transactions.pdf | fine-grained feedback labels |
+| SingPAD | sight-singing / learner modeling | records; note correctness; concept mappings; pitch/rhythm evaluations | HUST / SingMaster | not specified | open | check source terms | https://zenodo.org/records/12729828 | https://github.com/itec-hust/singKT-dataset | no raw singing-audio focus, but strong for tutoring logic |
+| SPED | sight-singing evaluation | audio; pitch score sequences; rhythm score sequences; score metadata | SPED authors | not specified | paper says open | check source terms | https://doi.org/10.1109/ICASSP49660.2025.10889301 | https://doi.org/10.1109/ICASSP49660.2025.10889301 | large learner dataset |
+| VocalSet | technique recognition | audio; singer labels; technique labels; vowels | Northwestern University | English | open | check Zenodo terms | https://zenodo.org/records/1492453 | https://zenodo.org/records/1442513 | core dataset for vocal technique work |
+| Annotated-VocalSet | pitch / note supervision | audio-aligned F0; note onsets; note offsets; MIDI pitch; lyrics | Maynooth University | English | open | check Zenodo terms | https://zenodo.org/records/7061507 | https://zenodo.org/records/7061507 | extends VocalSet with note annotations |
+| Vocadito | pitch tracking | audio; F0; note annotations; lyrics; language labels | Spotify + IRCAM | multilingual | open | check Zenodo terms | https://zenodo.org/records/5578807 | https://zenodo.org/records/5578807 | clean monophonic singing dataset |
+| GTSinger | multi-task singing | audio; paired speech; phoneme alignment; technique labels; style labels; music scores | Zhejiang University | multilingual | open | dataset terms | https://huggingface.co/papers/2409.13832 | https://huggingface.co/datasets/GTSinger/GTSinger | broad foundation dataset |
+| SingMOS | singing quality prediction | audio; MOS ratings | SingMOS authors | Mandarin, Japanese | open | check HF terms | https://huggingface.co/papers/2406.10911 | https://huggingface.co/datasets/TangRain/SingMOS | useful for perceived quality modeling |
+| SingMOS-Pro | multi-dimensional singing quality | audio; overall; lyrics; melody ratings | SingMOS-Pro authors | Mandarin, Japanese | open | check HF terms | https://huggingface.co/papers/2510.01812 | https://huggingface.co/datasets/TangRain/SingMOS-Pro | more detailed than SingMOS |
+| MIR-1K | pitch / separation | audio; pitch contours; lyrics; vocal activity | National Taiwan University researchers | Mandarin | open | check source terms | http://mirlab.org/dataset/public/ | https://zenodo.org/records/3532216 | classic karaoke dataset |
+| iKala | pitch / lyrics / separation | audio; F0; timestamped lyrics; vocal activity | National Taiwan University researchers | Chinese pop | request | check source terms | http://mirlab.org/dataset/public/ | https://zenodo.org/records/3532214 | widely used benchmark |
+| MedleyDB | melody / stems | multitrack audio; stems; melody annotations | MedleyDB collaborators | mixed | open | CC BY-NC-SA | http://medleydb.weebly.com/ | http://medleydb.weebly.com/ | useful support dataset, not singing-only |
+| MUSDB18 | source separation | audio stems | SigSep / MUSDB creators | mixed | request | dataset terms | https://zenodo.org/records/1117372 | https://zenodo.org/records/1117372 | for accompaniment removal pipelines |
+| DALI | lyrics alignment | lyrics alignments; melody info | DALI authors | mixed | open annotations | check repo terms | https://github.com/gabolsgabs/DALI | https://github.com/gabolsgabs/DALI | audio depends on YouTube availability |
+| M4Singer | multi-singer singing | audio; note boundaries; phoneme alignment; MIDI; pitch; style labels | M4Singer authors | Mandarin | open | CC BY-NC | https://m4singer.github.io/ | https://m4singer.github.io/ | strong support dataset |
+| OpenCPOP | SVS benchmark | audio; phoneme boundaries; MIDI; lyrics; TextGrid | OpenCPOP authors | Mandarin | open | CC BY-NC-ND | https://github.com/wenet-e2e/opencpop | https://wenet-e2e.github.io/opencpop/ | clean benchmark corpus |
+| CSD | song alignment | audio; MIDI; grapheme/phoneme lyrics | CSD authors | Korean, English | open | check repo terms | https://github.com/equal-singer/CSD | https://github.com/equal-singer/CSD | simple aligned songs |
+| NHSS | speech-to-singing | speech; singing; word annotations | NUS researchers | English | open for research | check source terms | https://hltnus.github.io/NHSSDatabase/ | https://hltnus.github.io/NHSSDatabase/ | useful for pronunciation transfer ideas |
+| NUS-48E | sung vs spoken | audio; phone annotations | NUS | English | open | check source terms | https://smcnus.comp.nus.edu.sg/ | https://smcnus.comp.nus.edu.sg/ | small but useful alignment dataset |
+| SingVERSE | singing enhancement | noisy-clean audio pairs | SingVERSE authors / Amphion | mixed | open | check HF terms | https://singverse.github.io/ | https://huggingface.co/datasets/amphion/SingVERSE | useful later for noisy practice recordings |
+| SVQTD | vocal pedagogy attributes | audio; paralinguistic singing labels | SVQTD authors | likely classical vocal repertoire | public page | verify before use | https://yanzexu.xyz/SVQTD/ | https://yanzexu.xyz/SVQTD/ | interesting for pedagogy-oriented labels |
+| Saarbruecken Voice Database | vocal health | voice recordings; healthy/pathological labels | Saarland University / Essen University Hospital | German | open | verify license | https://doi.org/10.1080/02699200701830869 | https://zenodo.org/records/16874898 | speech/clinical, not singing-specific |
+| GRB assessment of Saarbruecken Voice Database | vocal quality labels | GRB labels | UdeA / UPM authors | German | open | verify license | https://doi.org/10.1109/JSTSP.2019.2956410 | https://zenodo.org/records/3550736 | add-on labels for Saarbruecken |
+| SongEval | song aesthetics | audio; multi-dimensional ratings | ASLP Lab authors | English, Mandarin | open | check repo terms | https://github.com/ASLP-lab/SongEval | https://github.com/ASLP-lab/SongEval | includes vocal naturalness but is not vocal-only |
+| Sing-MD | expert singing assessment | audio; 4-dim expert scores; text critiques | Zhejiang University authors | Mandarin | request | verify terms | https://github.com/CarlWangChina/Singing-Aesthetic-Assessment | https://github.com/CarlWangChina/Singing-Aesthetic-Assessment | high-value if access is workable |
+| STraDa | singer traits | audio; singer id; gender; age; language; genre | STraDa authors | mixed | open | CC BY-NC | https://zenodo.org/records/10057434 | https://zenodo.org/records/10057434 | more singer-traits than coaching |
